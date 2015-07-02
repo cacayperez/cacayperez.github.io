@@ -54,7 +54,7 @@ hr.star-primary:after {
     top: -.8em;
     padding: 0 .25em;
     font-family: FontAwesome;
-    font-size: 2em;
+    /*font-size: 2em; */
 }
 
 hr.star-light {
