@@ -63,7 +63,7 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #{{ site.color.primary }};
+    background-color: #{{ site.color.primary }} !important;
 }
 
 hr.star-primary {
@@ -179,9 +179,9 @@ section h2 {
     font-size: 3em;
 }
 
-section.success {
+section.blog {
     color: #fff;
-    background: #{{ site.color.primary }};
+    background: #{{ site.color.primary }} !important;
 }
 
 @media(max-width:767px) {
@@ -265,7 +265,7 @@ section.success {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #{{ site.color.primary }};
+    color:#{{ site.color.primary }} !important;
     background: #fff;
 }
 
@@ -318,7 +318,7 @@ section.success {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #{{ site.color.primary }};
+    color: #{{ site.color.primary }} !important;
 }
 
 form .row:first-child .floating-label-form-group {
