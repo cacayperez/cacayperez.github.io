@@ -86,7 +86,7 @@
                   {% if paginator.next_page %}
                     <li><a href="{{ paginator.next_page_path }}" class="next btn btn-default  btn-success drawkle-btn"> <i class="fa fa-angle-left"></i> Older posts</a></li>
                     {% else %}
-                      <li data-trigger="hover" data-container="body" data-toggle="popover" data-placement="top" data-content="You have reached the oldest posts.">
+                      <li data-trigger="hover" data-container="body" data-toggle="popover" data-placement="top" data-content="You have reached the oldest post.">
                         <a type="button" disabled class="btn btn-default  btn-sm btn-success drawkle-btn"> <i class="fa fa-angle-left">  Older Posts </i></a>
                       </li>
                   {% endif %}
@@ -95,7 +95,7 @@
                   {% if paginator.previous_page %}
                   </li>
                   <li>
-                    <a href="{{ paginator.previous_page_path }}" class="previous btn btn-default  btn-success drawkle-btn"> Recent Posts <i class="fa fa-angle-right"></i></a>
+                    <a href="{{ paginator.previous_page_path }}" class="previous btn btn-default  btn-success drawkle-btn"> Recent Posts  <i class="fa fa-angle-right"></i></a>
                   </li>
                     {% else %}
                       <li data-trigger="hover" data-container="body" data-toggle="popover" data-placement="top" data-content="You are already viewing the newest posts.">

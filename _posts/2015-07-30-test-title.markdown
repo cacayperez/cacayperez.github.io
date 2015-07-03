@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 modal-id: 1
 date: 2015-07-30
 img: cabin.png
