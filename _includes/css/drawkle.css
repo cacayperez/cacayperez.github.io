@@ -1526,3 +1526,8 @@ header .intro-text .skills {
 #drawkle-nav .navbar-toggle .icon-bar {
 	background-color: #fff;
 }
+#drawkle-nav  .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+	background-color: #1a242f;
+}
