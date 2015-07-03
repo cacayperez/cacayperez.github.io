@@ -11,8 +11,10 @@
 
         <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
 
+
         <link rel="stylesheet" href="{{ "/style.css" }}">
         <link rel="stylesheet" href="{{ "/blog/blog.css" }}">
+
         <!-- Custom Fonts -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -30,7 +32,7 @@
       <body id="page-top" class="index">
 
 <!-- Navigation -->
- <nav class="navbar navbar-default navbar-fi" style="border-radius:0px;">
+ <nav class="navbar navbar-default" id="drawkle-nav" style="border-radius:0px;">
      <div class="container">
          <!-- Brand and toggle get grouped for better mobile display -->
          <div class="navbar-header page-scroll">
@@ -76,7 +78,7 @@
                 <p class="blog-post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
                 <p>{{ post.content| truncatewords: 100 }}</p>
 
-                <a href="{{post.url | remove: "/blog/post/:num"}}" class="btn btn-default btn-success btn-sm drawkle-btn">Read More</a>
+                <a href="{{post.url | remove: "/blog/post/:num"}}" class="btn btn-default btn-success btn-sm drawkle-btn drawkle-btn-blog">Read More</a>
               </div><!-- /.blog-post -->
               <hr>
               {% endfor %}
@@ -84,10 +86,10 @@
                 <div class="pagination">
                   <ul class="list-inline">
                   {% if paginator.next_page %}
-                    <li><a href="{{ paginator.next_page_path }}" class="next btn btn-default  btn-success drawkle-btn"> <i class="fa fa-angle-left"></i> Older posts</a></li>
+                    <li><a href="{{ paginator.next_page_path }}" class="next btn btn-default  btn-success drawkle-btn drawkle-btn-blog"> <i class="fa fa-angle-left"></i> Older posts</a></li>
                     {% else %}
                       <li data-trigger="hover" data-container="body" data-toggle="popover" data-placement="top" data-content="You have reached the oldest post.">
-                        <a type="button" disabled class="btn btn-default  btn-sm btn-success drawkle-btn"> <i class="fa fa-angle-left">  Older Posts </i></a>
+                        <a type="button" disabled class="btn btn-default  btn-sm btn-success drawkle-btn drawkle-btn-blog"> <i class="fa fa-angle-left">  Older Posts </i></a>
                       </li>
                   {% endif %}
                   <li>
@@ -95,11 +97,11 @@
                   {% if paginator.previous_page %}
                   </li>
                   <li>
-                    <a href="{{ paginator.previous_page_path }}" class="previous btn btn-default  btn-success drawkle-btn"> Recent Posts  <i class="fa fa-angle-right"></i></a>
+                    <a href="{{ paginator.previous_page_path }}" class="previous btn btn-default  btn-success drawkle-btn drawkle-btn-blog"> Recent Posts  <i class="fa fa-angle-right"></i></a>
                   </li>
                     {% else %}
                       <li data-trigger="hover" data-container="body" data-toggle="popover" data-placement="top" data-content="You are already viewing the newest posts.">
-                          <a type="button" disabled class="btn btn-default  btn-sm btn-success drawkle-btn"> Recent Posts <i class="fa fa-angle-right"></i></a>
+                          <a type="button" disabled class="btn btn-default  btn-sm btn-success drawkle-btn drawkle-btn-blog"> Recent Posts <i class="fa fa-angle-right"></i></a>
                       </li>
                   {% endif %}
                   </ul>
@@ -160,7 +162,7 @@
             <div class="footer-below">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12" style="color:white;">
                               Copyright &copy; {{ site.footer.copyright }} 20{{ site.time | date: '%y' }}
                           </div>
                       </div>
