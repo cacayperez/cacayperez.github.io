@@ -11,13 +11,6 @@ jQuery(document).ready(function(){
 	jQuery('#submit, .tagcloud, button[type=submit], .comment-reply-link, .widget_rss ul, .select, table#wp-calendar, #infinite-handle').show("fast");
 });
 
-// Handle new items appended by infinite scroll.
-jQuery(document).on('post-load', function() {
-	setInterval( function() {
-		jQuery('#infinite-handle').addClass('btn btn-default');
-		jQuery('#submit, html input[type=button], input[type=reset], input[type=submit]').addClass('btn btn-default btn-sm');
-	}, 300 );
-});
 
 // Adding a Filter to the Portfolio page
 jQuery(document).ready(function($) {
@@ -76,3 +69,24 @@ jQuery('body').scrollspy({
 jQuery('.navbar-collapse ul li a').click(function() {
     jQuery('.navbar-toggle:visible').click();
 });
+
+$(function () {
+  $('[data-toggle="popover"]').popover({ trigger: "hover" })
+})
+
+$(window).scroll(function () {
+
+    if ( $(window).width() > 300 || !isiOS ) {
+
+        if ($(window).scrollTop() > 100) {
+          $('#back-to-top').removeClass('hidden');
+        }
+				else {
+					$('#back-to-top').addClass('hidden');
+				}
+
+    }
+
+});
+
+$(window).scroll();

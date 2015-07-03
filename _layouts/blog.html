@@ -1,21 +1,174 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
-    <body id="page-top" class="index">
-    {% include nav.html %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="{{ site.description }}">
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
-    <section id="blog-posts">
-      <div class="container">
-        <div class="row">
-          {% for post in site.posts limit:1 %}
+        <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
 
-          {{post.title}}
-          {% endfor %}
-        </div>
-      </div>
-    </section>
+        <link rel="stylesheet" href="{{ "/style.css" }}">
+        <link rel="stylesheet" href="{{ "/blog/blog.css" }}">
+        <!-- Custom Fonts -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    {% include footer.html %}
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+
+      <body id="page-top" class="index">
+
+<!-- Navigation -->
+ <nav class="navbar navbar-default navbar-fi" style="border-radius:0px;">
+     <div class="container">
+         <!-- Brand and toggle get grouped for better mobile display -->
+         <div class="navbar-header page-scroll">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+             </button>
+             <a class="navbar-brand" href="/blog/">{{ site.title }} Blog</a>
+         </div>
+
+
+         <!-- Collect the nav links, forms, and other content for toggling -->
+         <!-- BLOG PAGE NAV -->
+
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <ul class="nav navbar-nav navbar-right">
+                 <li class="hidden">
+                     <a href="#page-top"></a>
+                 </li>
+                 <li>
+                     <a href="/">Home</a>
+                 </li>
+                 <!--<li class="page-scroll">
+                     <a href="/portfolio" >Portfolio</a>
+                 </li>
+                 -->
+             </ul>
+         </div>
+         <!-- /.navbar-collapse -->
+     </div>
+     <!-- /.container-fluid -->
+ </nav>
+
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-8 blog-main">
+              {% for post in site.categories['blog'] %}
+              <div class="blog-post" style="padding-bottom: 10px; padding-top:10px">
+                <h2 class="blog-post-title">{{ post.title }}</h2>
+                <p class="blog-post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
+                <p>{{ post.content| truncatewords: 100 }}</p>
+
+                <a href="#" class="btn btn-default btn-success btn-sm drawkle-btn">Read More</a>
+              </div><!-- /.blog-post -->
+              <hr>
+              {% endfor %}
+              <nav>
+                <div class="pagination">
+                  <ul class="list-inline">
+                  {% if paginator.next_page %}
+                    <li><a href="{{ paginator.next_page_path }}" class="next btn btn-default  btn-success drawkle-btn"> <i class="fa fa-angle-left"></i> Older posts</a></li>
+                    {% else %}
+                      <li data-trigger="hover" data-container="body" data-toggle="popover" data-placement="top" data-content="You have reached the oldest posts.">
+                        <a type="button" disabled class="btn btn-default  btn-sm btn-success drawkle-btn"> <i class="fa fa-angle-left">  Older Posts </i></a>
+                      </li>
+                  {% endif %}
+                  <li>
+                    <span class="page_number" style="padding-left: 10px; padding-right: 10px;">   Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+                  {% if paginator.previous_page %}
+                  </li>
+                  <li>
+                    <a href="{{ paginator.previous_page_path }}" class="previous btn btn-default  btn-success drawkle-btn"> Recent Posts <i class="fa fa-angle-right"></i></a>
+                  </li>
+                    {% else %}
+                      <li data-trigger="hover" data-container="body" data-toggle="popover" data-placement="top" data-content="You are already viewing the newest posts.">
+                          <a type="button" disabled class="btn btn-default  btn-sm btn-success drawkle-btn"> Recent Posts <i class="fa fa-angle-right"></i></a>
+                      </li>
+                  {% endif %}
+                  </ul>
+
+
+                </div>
+              </nav>
+
+            </div><!-- /.blog-main -->
+
+            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
+              <div class="sidebar-module">
+                <h4>RECENT</h4>
+                {%for post in site.categories['blog'] %}
+                  {% unless post.next %}
+                    <ul class="this list-unstyled">
+                  {% else %}
+                    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+                    {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+                    {% if year != nyear %}
+                      </ul>
+                      <h4><a role="button" data-toggle="collapse" href="#collapseExample{{ post.date | date: '%Y' }}" aria-expanded="false" aria-controls="collapseExample{{ post.date | date: '%Y' }}" >{{ post.date | date: '%Y' }}</a></h4>
+                      <ul class="past list-unstyled collapse" id="collapseExample{{ post.date | date: '%Y' }}">
+                    {% endif %}
+                  {% endunless %}
+                    <li><time>{{ post.date | date:"%d %b" }}</time><a href="{{ post.url }}"> {{ post.title }}</a></li>
+                {% endfor %}
+                </ul>
+
+              </div>
+              <div class="sidebar-module">
+                <h4>Elsewhere</h4>
+                <ol class="list-unstyled">
+                  {% for network in site.social %}
+                  <li><a href="{{network.url}}" class="text-capitalize"> {{network.title}} </a></li>
+                  {% endfor %}
+                </ol>
+              </div>
+
+            </div><!-- /.blog-sidebar -->
+
+          </div><!-- /.row -->
+
+        </div><!-- /.container -->
+
+
+        <footer>
+          <div class="container text-right">
+            <div class="page-scroll">
+              <span style="color:#233140; margin: 0 20px 0 20px; font-weight:bold;"> BACK TO TOP </span>
+              <a class="btn btn-primary drawkle-btn" href="#page-top" style="margin-bottom:0px; background-color:#233140; border-color: #233140;">
+                  <i class="fa fa-chevron-up"></i>
+              </a>
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                              Copyright &copy; {{ site.footer.copyright }} 20{{ site.time | date: '%y' }}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
     {% include js.html %}
     </body>
 </html>
