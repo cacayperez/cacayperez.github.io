@@ -1,0 +1,12 @@
+---
+layout: default
+modal-id: 1
+date: 2015-07-04
+img_preview: gunner_preview.png
+img: gunner.jpg
+alt: Gunner
+category: portfolio
+tags: [character-design]
+description: A gunner character concept
+
+---

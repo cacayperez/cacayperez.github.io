@@ -483,7 +483,6 @@ hr.contact:after {
 6.3 Timeline Style
 --------------------------------------------------------------*/
 .timeline {
-    position: relative;
     padding: 0;
     list-style: none;
 }
@@ -495,6 +494,7 @@ hr.contact:after {
     bottom: 0;
     left: 40px;
     width: 2px;
+		margin-top: 50px;
     margin-left: -1.5px;
     background-color: #f1f1f1;
 }
@@ -545,13 +545,13 @@ hr.contact:after {
     z-index: 100;
     position: absolute;
     left: 0;
-    width: 80px;
-    height: 80px;
+    width: 60px;
     margin-left: 0;
     /*border: 7px solid #f1f1f1; -->*/
     border-radius: 100%;
     text-align: center;
     color: #fff;
+		margin-left: -5px
 }
 
 .timeline>li .timeline-image h3 {
@@ -1273,7 +1273,7 @@ img {
     }
 
     .timeline>li {
-        margin-bottom: 100px;
+        margin-bottom: 20px;
         min-height: 100px;
     }
 
@@ -1321,7 +1321,7 @@ img {
     .timeline>li .timeline-image {
         width: 150px;
         height: 150px;
-        margin-left: -75px;
+        margin-left: -50px;
     }
 
     .timeline>li .timeline-image h3 {
@@ -1338,7 +1338,7 @@ img {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
     .timeline>li {
-        min-height: 170px;
+        min-height: 150px;
     }
 
     .timeline>li .timeline-panel {
@@ -1347,8 +1347,8 @@ img {
 
     .timeline>li .timeline-image {
         width: 170px;
-        height: 170px;
-        margin-left: -85px;
+        height: 100px;
+        margin-left: -50px;
     }
 
     .timeline>li .timeline-image h3 {
@@ -1379,7 +1379,6 @@ hr.star-primary {
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
     display: inline-block;
     position: relative;
     top: -.8em;

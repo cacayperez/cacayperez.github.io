@@ -76,7 +76,7 @@
                 <p class="blog-post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
                 <p>{{ post.content| truncatewords: 100 }}</p>
 
-                <a href="{{post.url | remove: "/blog/"}}" class="btn btn-default btn-success btn-sm drawkle-btn">Read More</a>
+                <a href="{{post.url | remove: "/blog/post/:num"}}" class="btn btn-default btn-success btn-sm drawkle-btn">Read More</a>
               </div><!-- /.blog-post -->
               <hr>
               {% endfor %}

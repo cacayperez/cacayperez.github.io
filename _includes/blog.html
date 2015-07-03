@@ -11,54 +11,62 @@
               <div class="col-lg-12">
                 <ul class="timeline">
                   <li>
-                    {% for post in site.posts limit:1 %}
+                    {% for post in site.categories['blog'] limit:1 %}
                     <div class="timeline-image">
-                      <a href="/" title="{{ post.title }}" >
+                      <a href="{{post.url}}" title="{{ post.title }}" >
                         <img src="img/timeline_images/{{post.thumbnail}}.png" class="img-circle img-responsive wp-post-image" alt>
                       </a>
                     </div>
                     <div class="timeline-panel">
                       <div class="timeline-heading">
-                        {{post.title}}
+                        <h4>{{post.title}}</h4>
+                        <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
                       </div>
                       <div class="timeline-body">
-                        {{post.description}}
+                        <i class="fa fa-quote-left"></i>
+                          <span style="padding-left: 15px; padding-right: 15px;">{{post.description}} </span>
+                        <i class="fa fa-quote-right"></i>
                       </div>
                     </div>
                     {% endfor %}
                   </li>
                   <li class="timeline-inverted">
-                    {% for post in site.posts offset:1 limit:1 %}
+                    {% for post in site.categories['blog'] offset:1 limit:1 %}
                     <div class="timeline-image">
-                      <a href="/" title="{{ post.title }}">
-                        <img src="http://i2.wp.com/portfolio.themeart.co/wp-content/uploads/2015/01/safe.png?resize=200%2C200" class="img-circle img-responsive wp-post-image" alt="{{ post.alt }}">
+                      <a href="{{post.url}}" title="{{ post.title }}">
+                        <img src="img/timeline_images/{{post.thumbnail}}.png" class="img-circle img-responsive wp-post-image" alt>
                       </a>
                     </div>
                     <div class="timeline-panel">
                       <div class="timeline-heading">
-                        {{post.title}}
+                        <h4>{{post.title}}</h4>
+                        <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
                       </div>
                       <div class="timeline-body">
-                        {{post.description}}
+                        <i class="fa fa-quote-left fa-lg"></i>
+                          <span style="padding-left: 15px; padding-right: 15px;">{{post.description}} </span>
+                        <i class="fa fa-quote-right fa-lg"></i>
                       </div>
                     </div>
                     {% endfor %}
                   </li>
                   <li>
-                    {% for post in site.posts offset:2 limit:1 %}
+                    {% for post in site.categories['blog'] offset:2 limit:1 %}
                     <div class="timeline-image">
-                      <a href="/" title="{{ post.title }}">
-                        <img src="http://i2.wp.com/portfolio.themeart.co/wp-content/uploads/2015/01/safe.png?resize=200%2C200" class="img-circle img-responsive wp-post-image" alt="{{ post.alt }}">
+                      <a href="{{post.url}}" title="{{ post.title }}">
+                      <img src="img/timeline_images/{{post.thumbnail}}.png" class="img-circle img-responsive wp-post-image" alt>
                       </a>
                     </div>
                     <div class="timeline-panel">
                       <div class="timeline-heading">
-                        {{post.title}}
+                        <h4>{{post.title}}</h4>
+                        <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
                       </div>
                       <div class="timeline-body">
-                        {{post.description}}
+                        <i class="fa fa-quote-left fa-lg"></i>
+                          <span style="padding-left: 15px; padding-right: 15px;">{{post.description}} </span>
+                        <i class="fa fa-quote-right fa-lg"></i>
                       </div>
-                    </div>
                     {% endfor %}
                   </li>
                 <ul>
@@ -66,7 +74,7 @@
             </div>
 
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <a href="/blog" class="btn btn-lg btn-outline drawkle-btn">
+                <a href="/blog" class="btn btn-lg btn-outline drawkle-btn" style="margin-top: 0px;">
                     <i class="fa fa-download"></i> More Posts
                 </a>
             </div>
