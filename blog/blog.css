@@ -1,7 +1,10 @@
 /*
  * Globals
  */
-
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
   /*font-family:"Georgia", "Times New Roman", Times, serif;*/
   color: #555;
@@ -156,15 +159,18 @@ h6, .h6 {
  */
 
 .blog-footer {
-  padding: 40px 0;
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
   border-top: 1px solid #e5e5e5;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
 
 #back-to-top {
     position: fixed;

@@ -70,16 +70,7 @@
           <div class="row">
 
             <div class="col-sm-8 blog-main">
-              {% for post in site.categories['blog'] %}
-              <div class="blog-post" style="padding-bottom: 10px; padding-top:10px">
-                <h2 class="blog-post-title">{{ post.title }}</h2>
-                <p class="blog-post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
-                <p>{{ post.content| truncatewords: 100 }}</p>
 
-                <a href="{{post.url | remove: "/blog/"}}" class="btn btn-default btn-success btn-sm drawkle-btn">Read More</a>
-              </div><!-- /.blog-post -->
-              <hr>
-              {% endfor %}
               <nav>
                 <div class="pagination">
                   <ul class="list-inline">
