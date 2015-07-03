@@ -48,3 +48,28 @@
             -->
         </div>
     </section>
+
+
+    <script type="text/javascript">
+  <!--//--><![CDATA[//><!--
+    var images = new Array()
+    function preload() {
+      for (i = 0; i < preload.arguments.length; i++) {
+        images[i] = new Image()
+        images[i].src = preload.arguments[i]
+      }
+    }
+
+    preload(
+
+      {% for post in site.categories['portfolio'] %}
+        {% if forloop.index < forloop.length%}
+          "http://drawkle.com/img/portfolio/{{post.img}}",
+        {%else%}
+          "http://drawkle.com/img/portfolio/{{post.img}}"
+        {% endif %}
+
+      {%endfor%}
+    )
+  //--><!]]>
+  </script>
