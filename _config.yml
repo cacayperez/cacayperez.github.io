@@ -47,7 +47,7 @@ credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a
 
 # Build settings
 markdown: kramdown
-permalink: /blog/:title
+permalink: /post/:title
 encoding: utf-8
 
 paginate: 5
