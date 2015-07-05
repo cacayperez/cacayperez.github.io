@@ -36,9 +36,10 @@ Download links are found below, but please, please read about the Creative Commo
 <br>
 <br>
 <hr>
-####DOWNLOAD:
 
-(Note: Clicking on the buttons will load the image on a new tab)
+**DOWNLOAD:**
 
-><a type="button" href="/img/blog/dark_castle_wallpaper.png" class="btn btn-primary btn-default drawkle-btn" target="_blank"> Dark Castle Wallpaper</a>
-><a type="button" href="/img/blog/dark_castle_wallpaper_2x.png" class="btn btn-primary btn-default drawkle-btn" target="_blank"> Dark Castle Wallpaper - High Quality</a>
+*Note: Clicking on any link will load the image on a new tab*
+
+<p><a href="/img/blog/dark_castle_wallpaper.png"  target="_blank"> Dark Castle Wallpaper</a></p>
+<p><a href="/img/blog/dark_castle_wallpaper_2x.png" target="_blank"> Dark Castle Wallpaper - High Quality</a></p>
