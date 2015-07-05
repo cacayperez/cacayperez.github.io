@@ -2,8 +2,6 @@
 layout: post
 date: 2015-7-4
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
 category: blog
 thumbnail: character_design
 description: The first official post for my website, i have also included some of my previous works, but I am yet to edit some of them to fit my theme. I had a lot of trouble setting up the website with jekyll ...

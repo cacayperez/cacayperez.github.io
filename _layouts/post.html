@@ -72,8 +72,18 @@
             <div class="col-sm-8 blog-main" style="padding-bottom: 200px;">
               <h2 class="blog-post-title">{{ page.title }}</h2>
               <hr>
-              {{content}}
+              <div>
+                {{content}}
+              </div>
+              {% if page.type == "cc4" %}
+                  <div style="font-size: 14px; padding-top: 50px;">
+                      <hr style>
+                    <span>This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International </a> License.</span>
+                  </div>
+              {% endif %}
             </div><!-- /.blog-main -->
+
+
 
             <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
 
@@ -94,6 +104,8 @@
                     <li><time>{{ post.date | date:"%d %b" }}</time><a href="{{ post.url }}"> {{ post.title }}</a></li>
                 {% endfor %}
                 </ul>
+
+
 
               </div>
               <div class="sidebar-module">
