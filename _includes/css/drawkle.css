@@ -545,13 +545,14 @@ hr.contact:after {
     z-index: 100;
     position: absolute;
     left: 0;
-    width: 60px;
+    width:60px;
     margin-left: 0;
-    /*border: 7px solid #f1f1f1; -->*/
+    border: 3px solid #f1f1f1;
     border-radius: 100%;
     text-align: center;
     color: #fff;
-		margin-left: -5px
+		margin-left: -5px;
+		margin-top: 20px;
 }
 
 .timeline>li .timeline-image h3 {
@@ -1319,8 +1320,8 @@ img {
     }
 
     .timeline>li .timeline-image {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        /*height: 150px;*/
         margin-left: -50px;
     }
 
@@ -1346,9 +1347,9 @@ img {
     }
 
     .timeline>li .timeline-image {
-        width: 170px;
+        /*width: 170x;*/
         height: 100px;
-        margin-left: -50px;
+        /*margin-left: -50px;*/
     }
 
     .timeline>li .timeline-image h3 {
