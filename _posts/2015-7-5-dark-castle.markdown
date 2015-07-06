@@ -7,6 +7,9 @@ img: dark_castle.jpg
 alt: Dark Castle
 category: portfolio
 tags: design
+
+sitemap: false
+
 description: A design concept for a game.
 
 ---

@@ -7,6 +7,9 @@ img: little_knight.jpg
 alt: Little Knight
 category: portfolio
 tags: [character-design]
+
+sitemap: false
+
 description: An optimistic knight
 
 ---

@@ -5,6 +5,9 @@ alt: image-alt
 category: blog
 thumbnail: castle
 type: cc4
+
+sitemap: true
+
 description: A game concept turned wallpaper. I had much fun designing it, and sort of got attached with it as well and ended up using it as my wallpaper.
 ---
 

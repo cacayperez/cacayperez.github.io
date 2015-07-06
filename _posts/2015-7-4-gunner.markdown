@@ -7,6 +7,9 @@ img: gunner.jpg
 alt: Gunner
 category: portfolio
 tags: [character-design]
+
+sitemap: false
+
 description: A gunner character concept
 
 ---

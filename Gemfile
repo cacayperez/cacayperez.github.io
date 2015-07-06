@@ -1,2 +1,3 @@
 
-gem 'jekyll-archives'
+gem 'jekyll-archives',
+gem 'jekyll-sitemap'
