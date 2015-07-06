@@ -2,7 +2,7 @@
 layout: default
 modal-id: 1
 date: 2015-07-04
-img_preview: gunner_preview.png
+img_preview: gunner_preview.jpg
 img: gunner.jpg
 alt: Gunner
 category: portfolio

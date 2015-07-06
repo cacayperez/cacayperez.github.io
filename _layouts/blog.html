@@ -74,7 +74,11 @@
             <div class="col-sm-8 blog-main">
               {% for post in site.categories['blog'] %}
               <div class="blog-post" style="padding-bottom: 10px; padding-top:10px">
+                <a href="{{post.url}}" title="{{ post.title }}" style="float: left; padding-right: 20px;">
+                  <img src="/img/timeline_images/{{post.thumbnail}}.png" class="img-circle img-responsive wp-post-image" style="height:50px; margin-top:5px; border: 2px solid #2c3e50; background-color:#2c3e50;"alt>
+                </a>
                 <h2 class="blog-post-title">{{ post.title }}</h2>
+
                 <p class="blog-post-meta">{{ post.date | date: '%B %d, %Y' }}</p>
                 <p>{{ post.content| truncatewords: 100 }}</p>
 
