@@ -12,7 +12,7 @@ description: A game concept turned wallpaper. I had much fun designing it, and s
 
 Here is a preview of the Dark Castle which is shown on the main page.
 
-![alt text](/img/blog/dark_castle_blog_preview.png "Dark Castle")
+![alt text](https://59a1a407a768420c120f97762b1b033bca34b478.googledrive.com/host/0ByHWDzyzOjn6flpPbHloZEt2cXJmY0FXdVNFckpLWlU2OWJ0b1NjNWtweGdnZzJrb1V4WWM/blog/dark_castle_blog_preview.png "Dark Castle")
 
 I started of with a simple pixel art for a castle concept, but somehow as i worked through it, i slowly kept increasing the size and it came in between pixel art and vector art. I really
 Enjoyed it and turned used it as my wallpaper.
@@ -41,5 +41,5 @@ Download links are found below, but please, please read about the Creative Commo
 
 *Note: Clicking on any link will load the image on a new tab*
 
-<p><a href="/img/blog/dark_castle_wallpaper.png"  target="_blank"> Dark Castle Wallpaper</a></p>
-<p><a href="/img/blog/dark_castle_wallpaper_2x.png" target="_blank"> Dark Castle Wallpaper - High Quality</a></p>
+<p><a href="https://59a1a407a768420c120f97762b1b033bca34b478.googledrive.com/host/0ByHWDzyzOjn6flpPbHloZEt2cXJmY0FXdVNFckpLWlU2OWJ0b1NjNWtweGdnZzJrb1V4WWM/blog/dark_castle_wallpaper.png"  target="_blank"> Dark Castle Wallpaper</a></p>
+<p><a href="https://59a1a407a768420c120f97762b1b033bca34b478.googledrive.com/host/0ByHWDzyzOjn6flpPbHloZEt2cXJmY0FXdVNFckpLWlU2OWJ0b1NjNWtweGdnZzJrb1V4WWM/blog/dark_castle_wallpaper_2x.png" target="_blank"> Dark Castle Wallpaper - High Quality</a></p>
