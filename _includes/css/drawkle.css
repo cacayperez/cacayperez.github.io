@@ -1394,15 +1394,15 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #{{ site.color.primary }} !important;
+    background-color: #24749E !important;
 }
 
 hr.star-primary {
-    border-color: #{{ site.color.secondary }};
+    border-color: #24749E;
 }
 
 hr.star-primary:after {
-    color: #{{ site.color.secondary }};
+    color: #24749E;
     background-color: #fff;
 }
 
@@ -1413,7 +1413,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #{{ site.color.primary }};
+    background: #24749E;
 }
 
 header .container {
