@@ -45,6 +45,16 @@ address:
 # Credits content
 credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
 
+#Google Drive url
+drive: https://googledrive.com/host/0ByHWDzyzOjn6flpPbHloZEt2cXJmY0FXdVNFckpLWlU2OWJ0b1NjNWtweGdnZzJrb1V4WWM/
+
+
+
+
+
+
+
+
 # Build settings
 markdown: kramdown
 permalink: /blog/post/:title
