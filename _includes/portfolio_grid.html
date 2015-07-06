@@ -65,8 +65,10 @@
       {% for post in site.categories['portfolio'] %}
         {% if forloop.index < forloop.length%}
           "{{site.drive}}/portfolio/{{post.img}}",
+          "{{site.drive}}/portfolio/{{post.img_preview}}",
         {%else%}
-          "{{site.drive}}/portfolio/{{post.img}}"
+          "{{site.drive}}/portfolio/{{post.img}}",
+          "{{site.drive}}/portfolio/{{post.img_preview}}"
         {% endif %}
 
       {%endfor%}
